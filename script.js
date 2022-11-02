@@ -1,17 +1,28 @@
 
 const title = document.getElementsByClassName('info-header')
-const content = document.getElementsByClassName('info-content')
+const content = document.getElementsByClassName('info-osio')
 
     for(let i=0; i < title.length; i++){
         title[i].addEventListener("click", function() {
             console.log("click")
-            
-                for(let i=0; i < content.length; i++){
-                    content[i].classList.toggle('active')
+            title[i].classList.toggle('info-header-active')  
+
+            for(let i=0; i < content.length; i++){   
+
+                if(title[i].classList.contains('info-header-active')){
+                    content[i].classList.toggle("active-content")
                     console.log("activated")
-                }
+                }   
+                else if(content[i].classList.contains("active-content")){
+                    content[i].classList.remove("active-content")
+                    console.log("deactivated")
+                }    
+            }
+            
         })
     }
+    
+    
 console.log("toiminnassa")
 
 
