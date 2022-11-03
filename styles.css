@@ -117,3 +117,6 @@ a{
   .ohjaustiimi li {
     font-weight: normal;
   }
+  .kirjaimet {
+    list-style: none;
+  }

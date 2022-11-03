@@ -34,4 +34,4 @@ function onKonamiCode(cb) {
     });
     }
     
-    onKonamiCode(function () {alert('\o/')})
+    onKonamiCode(function () {alert("Moi!")})
