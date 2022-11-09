@@ -11,8 +11,7 @@ const content = document.getElementsByClassName('info-osio')
             for(let i=0; i < content.length; i++){          // Iterate through another HTMLCollecton
 
                 if(title[i].classList.contains('info-header-active')){  // Add style based on what style previous element (title) has
-                    content[i].classList.add("active-content")        
-                   
+                    content[i].classList.add("active-content")               
                 }   
                 else if(content[i].classList.contains("active-content")){  // Remove style based on what style previous element (content) has
                     content[i].classList.remove("active-content")
@@ -26,7 +25,7 @@ const content = document.getElementsByClassName('info-osio')
 // Code for a modal
 
 const modal = document.getElementById("modal");  // get the modal
-const img = document.getElementsByClassName("sarastia-img"); // get images for modal
+const img = document.getElementsByClassName("modal-img"); // get images for modal
 const modalImg = document.getElementById("img01"); 
 
 for(let i=0; i < img.length; i++){ 
