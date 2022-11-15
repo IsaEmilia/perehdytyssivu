@@ -1,18 +1,28 @@
-    :root {
+
+/* Colour variables for page; */    
+/* Instead of colour name use var(--[variable name]); */
+:root {
     --kesä: #ffc61e;
     --suomenlinna: #f5a3c7;
     --hopea: #dedfe1;
     --kulta: #c2a251;
     --musta: #000000;
-    }
+}
 
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     margin: 0;
 }
+
+/* Make all links look prettier */
+a{
+    text-decoration: none;
+}
 html {
     background-color: var(--hopea);
 }
+
+/* Header style */
 nav {
     display: grid;
     grid-template-columns: 1fr, 2fr, 1fr;
@@ -25,16 +35,14 @@ h1 {
     grid-column: 2;
     color: #f1f1f1;
 }
-a{
-    text-decoration: none;
-}
+
+/* Page content centered */
 .wrap {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 50px;
 }
-
 .osiot {
     display: flex;
     flex-direction: column;
@@ -44,6 +52,10 @@ a{
 .info-container {
     max-width: 750px;
 }
+
+
+
+/* Styles for accordion headers */
 .info-header{
     max-width: 750px;
     display: flex;
@@ -70,14 +82,18 @@ a{
     align-self: flex-end;
     padding: 5px;
 }
-.info-osio {
-    overflow: hidden;
-    display: none;
-}
+
+/* Active accordion headers */
 .info-header-active .info-arrow  {transform: rotate(90deg);}
 .info-header-active{
     background-color: var(--kesä);
     color: var(--musta);
+}
+
+/* Styles for all accordion menu content, first invisible and then after clicked */
+.info-osio {
+    overflow: hidden;
+    display: none;
 }
 .active-content {
     display:block;
@@ -87,25 +103,14 @@ a{
     font-size: 1.3rem;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-  
-  /* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-  
-  /* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-  
-  /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+/*For mobile views*/
+::-webkit-scrollbar { width: 10px; } 
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+
+/* Styles for different specific accordion sections */
 .johtaja{
     list-style: none;
 }
@@ -119,6 +124,9 @@ a{
 .kirjaimet {
     list-style: none;
 }
+
+
+/* Styles for image modal */
 .modal-img {
     height: 85%;
     width: 85%;
@@ -129,7 +137,6 @@ a{
     cursor: pointer;
     transition: 0.3s;
 }
-
 .modal {
     display: none;
     position: fixed;
@@ -142,7 +149,7 @@ a{
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.9); 
-  }
+}
 .close-modal {
     display: none;
 }
@@ -152,7 +159,6 @@ a{
     width: 100%;
     max-width: 1000px;
 }
-
 #close {
     position: absolute;
     top: 15px;
@@ -162,14 +168,12 @@ a{
     font-weight: bold;
     transition: 0.3s;
 }
-
 #close:hover,
 #close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
-
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
